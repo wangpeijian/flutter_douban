@@ -22,7 +22,10 @@
 //     );
 //   }
 // }
+
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo1/pages/Home/Index.dart';
+import 'package:flutter_app_demo1/utils/ConstantString.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,19 +34,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutteraa', //?
-      home: Scaffold(
-          appBar: new AppBar(
-            title: new Text('Welcome to Flutter'),
-            backgroundColor: Colors.deepOrange,
-          ),
-          body: Container(
-            child: Text("hell121233123o"),
-            alignment: Alignment.center,
-            width: 500.0,
-            height: 400.0,
-            color: Colors.lightBlue,
-          )),
+      title: ConstantString.home_title, //?
+      home: IndexPage(),
     );
   }
 }
