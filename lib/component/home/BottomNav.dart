@@ -12,6 +12,13 @@ class BottomNav {
         )),
     BottomNavigationBarItem(
         icon: Icon(
+          Icons.av_timer,
+        ),
+        title: Text(
+          ConstantString.home_nav_soon,
+        )),
+    BottomNavigationBarItem(
+        icon: Icon(
           Icons.assessment,
         ),
         title: Text(
@@ -23,13 +30,6 @@ class BottomNav {
         ),
         title: Text(
           ConstantString.home_nav_search,
-        )),
-    BottomNavigationBarItem(
-        icon: Icon(
-          Icons.info,
-        ),
-        title: Text(
-          ConstantString.home_nav_me,
         )),
   ];
 }

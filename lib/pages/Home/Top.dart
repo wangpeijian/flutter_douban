@@ -5,25 +5,25 @@ import 'package:flutter_app_demo1/model/Movie/MovieList.dart';
 import 'package:flutter_app_demo1/rigger/ScrollableList.dart';
 import 'package:flutter_app_demo1/utils/API.dart';
 
-class HotPage extends StatelessWidget {
+class TopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Hot();
+    return Top();
   }
 }
 
-class Hot extends StatefulWidget {
+class Top extends StatefulWidget {
   @override
-  _HotWidgetState createState() => new _HotWidgetState();
+  _TopWidgetState createState() => new _TopWidgetState();
 }
 
-class _HotWidgetState extends ScrollableList<Hot> {
+class _TopWidgetState extends ScrollableList<Top> {
   @override
   requestData(int start, int pageSize) async {
     Map<int, Object> req = new Map();
     req[0] = start;
     req[1] = pageSize;
-    var json = await APITool.get(API.movie_in_theaters, req: req);
+    var json = await APITool.get(API.movie_top_250, req: req);
     return MovieList.fromJson(json);
   }
 

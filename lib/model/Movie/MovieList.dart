@@ -1,11 +1,13 @@
 import 'dart:convert' show json;
 
-class MovieList {
+import 'package:flutter_app_demo1/model/PageDataResult.dart';
+
+class MovieList extends PageDataResult<subject> {
   int count;
   int start;
   int total;
-  String title;
   List<subject> subjects;
+  String title;
 
   MovieList.fromParams(
       {this.count, this.start, this.total, this.title, this.subjects});

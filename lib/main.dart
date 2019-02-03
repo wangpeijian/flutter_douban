@@ -35,7 +35,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: ConstantString.home_title, //?
-      home: IndexPage(),
+      theme: new ThemeData(
+        primaryColor: Colors.deepOrange,
+//        backgroundColor: Colors.blue,
+//        bottomAppBarColor: Colors.deepOrange,
+        scaffoldBackgroundColor: Colors.grey,
+      ),
+      home: HomePage(),
     );
   }
 }
