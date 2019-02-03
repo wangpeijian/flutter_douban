@@ -5,7 +5,7 @@ import 'package:flutter_app_demo1/pages/Home/Search.dart';
 import 'package:flutter_app_demo1/pages/Home/Soon.dart';
 import 'package:flutter_app_demo1/pages/Home/Top.dart';
 import 'package:flutter_app_demo1/utils/ConstantString.dart';
-//import 'package:fluwx/fluwx.dart' as fluwx;
+/*import 'package:fluwx/fluwx.dart' as fluwx;*/
 
 class HomePage extends StatelessWidget {
   @override
@@ -37,7 +37,9 @@ class _HomeWidgetState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-//    fluwx.register(appId: "wxd930ea5d5a258f4f");
+    /*fluwx.responseFromShare.listen((data) {
+      print(data.toString());
+    });*/
 
 //    Future<void> _neverSatisfied() async {
 //      return showDialog<void>(
@@ -96,7 +98,18 @@ class _HomeWidgetState extends State<Home> {
           actions: <Widget>[
             new IconButton(
               icon: new Icon(Icons.share),
-              onPressed: null,
+              onPressed: () {
+                print("点击了");
+                /*fluwx
+                    .share(fluwx.WeChatShareTextModel(
+                        text: '分享内容',
+                        transaction:
+                            "text${DateTime.now().millisecondsSinceEpoch}",
+                        scene: fluwx.WeChatScene.SESSION))
+                    .then((data) {
+                  print(data);
+                });*/
+              },
             ),
           ],
         ),
