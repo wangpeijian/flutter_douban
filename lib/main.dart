@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.deepOrange,
 //        backgroundColor: Colors.blue,
 //        bottomAppBarColor: Colors.deepOrange,
-        scaffoldBackgroundColor: Colors.grey,
+        scaffoldBackgroundColor: Color(0xffcccccc),
       ),
       home: HomePage(),
     );

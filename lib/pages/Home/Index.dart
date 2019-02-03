@@ -5,6 +5,7 @@ import 'package:flutter_app_demo1/pages/Home/Search.dart';
 import 'package:flutter_app_demo1/pages/Home/Soon.dart';
 import 'package:flutter_app_demo1/pages/Home/Top.dart';
 import 'package:flutter_app_demo1/utils/ConstantString.dart';
+//import 'package:fluwx/fluwx.dart' as fluwx;
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,8 +23,8 @@ class _HomeWidgetState extends State<Home> {
   int _selectedIndex = 0;
 
   final _widgetOptions = [
-    HotPage(),
     Soon(),
+    HotPage(),
     TopPage(),
     SearchPage(),
   ];
@@ -36,6 +37,8 @@ class _HomeWidgetState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+//    fluwx.register(appId: "wxd930ea5d5a258f4f");
+
 //    Future<void> _neverSatisfied() async {
 //      return showDialog<void>(
 //        context: context,
@@ -90,13 +93,12 @@ class _HomeWidgetState extends State<Home> {
 //            tooltip: '菜单提示',
 //            onPressed: null,
 //          ),
-//          actions: <Widget>[
-//            new IconButton(
-//              icon: new Icon(Icons.search),
-//              tooltip: '搜索提示',
-//              onPressed: null,
-//            ),
-//          ],
+          actions: <Widget>[
+            new IconButton(
+              icon: new Icon(Icons.share),
+              onPressed: null,
+            ),
+          ],
         ),
         body: new Container(
           child: _widgetOptions[_selectedIndex],

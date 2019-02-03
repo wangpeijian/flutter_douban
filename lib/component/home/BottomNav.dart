@@ -5,17 +5,17 @@ class BottomNav {
   static final List items = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
         icon: Icon(
-          Icons.home,
-        ),
-        title: Text(
-          ConstantString.home_nav_home,
-        )),
-    BottomNavigationBarItem(
-        icon: Icon(
           Icons.av_timer,
         ),
         title: Text(
           ConstantString.home_nav_soon,
+        )),
+    BottomNavigationBarItem(
+        icon: Icon(
+          Icons.home,
+        ),
+        title: Text(
+          ConstantString.home_nav_home,
         )),
     BottomNavigationBarItem(
         icon: Icon(
