@@ -22,27 +22,27 @@ class MovieItemState extends State<MovieItem> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      //主体结构, 缩略图 - 内容 - 评分
+        //主体结构, 缩略图 - 内容 - 评分
         child: GestureDetector(
-          onTap: () {
-            //监听点击事件,跳转到详情页面
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => DetailPage(widget._subject.id)),
-            );
-          },
-          child: Row(mainAxisSize: MainAxisSize.max, children: <Widget>[
-            //缩略图
-            _Poster(widget._subject),
+      onTap: () {
+        //监听点击事件,跳转到详情页面
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DetailPage(widget._subject.id)),
+        );
+      },
+      child: Row(mainAxisSize: MainAxisSize.max, children: <Widget>[
+        //缩略图
+        _Poster(widget._subject),
 
-            Expanded(
-              child: _Content(widget._subject, widget._index),
-            )
+        Expanded(
+          child: _Content(widget._subject, widget._index),
+        )
             //内容介绍
             ,
-          ]),
-        ));
+      ]),
+    ));
   }
 }
 
