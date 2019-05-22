@@ -1,6 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+//apikey=0df993c66c0c636e29ecbb5344252a4a
+//https://douban.uieee.com/v2
+//https://www.jianshu.com/p/d9701a81be8e
 class API {
   //豆瓣热映
   //start: 数据的开始项
