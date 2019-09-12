@@ -5,17 +5,24 @@ class BottomNav {
   static final List items = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
         icon: Icon(
-          Icons.av_timer,
+          Icons.notifications_active,
         ),
         title: Text(
           ConstantString.home_nav_soon,
         )),
     BottomNavigationBarItem(
         icon: Icon(
-          Icons.home,
+          Icons.ondemand_video,
         ),
         title: Text(
-          ConstantString.home_nav_home,
+          ConstantString.home_ondemand_video,
+        )),
+    BottomNavigationBarItem(
+        icon: Icon(
+          Icons.new_releases,
+        ),
+        title: Text(
+          ConstantString.home_new_movies,
         )),
     BottomNavigationBarItem(
         icon: Icon(
@@ -23,13 +30,6 @@ class BottomNav {
         ),
         title: Text(
           ConstantString.home_nav_rank,
-        )),
-    BottomNavigationBarItem(
-        icon: Icon(
-          Icons.search,
-        ),
-        title: Text(
-          ConstantString.home_nav_search,
         )),
   ];
 }

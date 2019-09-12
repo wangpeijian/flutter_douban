@@ -1,41 +1,41 @@
 import 'dart:convert';
 import 'dart:io';
 
-//apikey=0df993c66c0c636e29ecbb5344252a4a
-//https://douban.uieee.com/v2
-//https://www.jianshu.com/p/d9701a81be8e
+// apikey=0df993c66c0c636e29ecbb5344252a4a
+// https://douban.uieee.com/v2 --正常
+// https://api.douban.com/v2  -- 需要apikey
+// 文档git： https://github.com/zce/douban-api-docs
 class API {
+  static const String base = "https://douban.uieee.com/v2/";
+
   //豆瓣热映
   //start: 数据的开始项
   //count：单页条数
   //city：城市
   static const String movie_in_theaters =
-      'https://api.douban.com/v2/movie/in_theaters?start=#{0}&count=#{1}';
+      base + 'movie/in_theaters?start=#{0}&count=#{1}';
 
   //电影top250
   //start: 数据的开始项
   //count：单页条数
   static const String movie_top_250 =
-      'https://api.douban.com/v2/movie/top250?start=#{0}&count=#{1}';
+      base + 'movie/top250?start=#{0}&count=#{1}';
 
-  //电影条目检索
+  //新片榜
   //start: 数据的开始项
   //count：单页条数
-  //q：要搜索的电影关键字
-  //tag：要搜索的电影的标签
   static const String movie_search =
-      'https://api.douban.com/v2/movie/search?start=#{0}&count=#{1}&q=#{2}&tag=#{3}';
+      base + 'movie/new_movies?start=#{0}&count=#{1}';
 
   //即将上映
   //start: 数据的开始项
   //count：单页条数
   static const String movie_coming_soon =
-      'https://api.douban.com/v2/movie/coming_soon?start=#{0}&count=#{1}';
+      base + 'movie/coming_soon?start=#{0}&count=#{1}';
 
   //条目详情
   //id: 电影id
-  static const String movie_subject =
-      'https://api.douban.com/v2/movie/subject/#{0}';
+  static const String movie_subject = base + 'movie/subject/#{0}';
 }
 
 class APITool {

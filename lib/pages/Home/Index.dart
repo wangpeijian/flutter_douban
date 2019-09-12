@@ -25,8 +25,8 @@ class _HomeWidgetState extends State<Home> {
   final _widgetOptions = [
     Soon(),
     HotPage(),
-    TopPage(),
     SearchPage(),
+    TopPage(),
   ];
 
   void _onItemTapped(int index) {
