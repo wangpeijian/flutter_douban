@@ -58,10 +58,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: ConstantString.home_title, //?
       theme: new ThemeData(
-        primaryColor: Colors.deepOrange,
+          primaryColor: Colors.deepOrange,
 //
-        scaffoldBackgroundColor: Color(0xffcccccc),
-      ),
+          scaffoldBackgroundColor: Color(0xffcccccc),
+          pageTransitionsTheme: const PageTransitionsTheme(
+              builders: <TargetPlatform, PageTransitionsBuilder>{
+                TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+                TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+              })),
       home: HomePage(),
     );
   }
