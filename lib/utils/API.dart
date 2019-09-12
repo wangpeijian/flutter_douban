@@ -22,10 +22,7 @@ class API {
       base + 'movie/top250?start=#{0}&count=#{1}';
 
   //新片榜
-  //start: 数据的开始项
-  //count：单页条数
-  static const String movie_search =
-      base + 'movie/new_movies?start=#{0}&count=#{1}';
+  static const String movie_search = base + 'movie/new_movies';
 
   //即将上映
   //start: 数据的开始项

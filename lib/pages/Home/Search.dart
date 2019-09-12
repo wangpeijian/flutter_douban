@@ -21,10 +21,9 @@ class _SearchWidgetState extends ScrollableList<Search> {
   @override
   requestData(int start, int pageSize) async {
     Map<int, Object> req = new Map();
-    req[0] = start;
-    req[1] = pageSize;
     var json = await APITool.get(API.movie_search, req: req);
-    return MovieList.fromJson(json);
+    // 此列表没有分页
+    return start == 0 ? MovieList.fromJson(json) : [];
   }
 
   @override

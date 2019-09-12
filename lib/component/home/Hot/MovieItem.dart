@@ -137,13 +137,22 @@ class _Content extends StatelessWidget {
       ),
     ));
 
+    List<String> directorsName = [];
+    _subject.directors.forEach((director) {
+      directorsName.add(director.name);
+    });
+
+    if (directorsName.length == 0) {
+      directorsName.add("未知");
+    }
+
     //导演
     subTitle.add(Container(
       color: Colors.black,
       padding: EdgeInsets.only(left: 3, right: 3),
       margin: EdgeInsets.only(right: 5),
       child: Text(
-        _subject.directors[0].name,
+        directorsName.join(','),
         style: TextStyle(color: Colors.white, fontSize: 10),
       ),
     ));
